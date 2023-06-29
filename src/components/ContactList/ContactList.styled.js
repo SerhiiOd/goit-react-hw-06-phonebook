@@ -6,3 +6,5 @@ export const List = styled.ul`
   align-items: center;
   justify-content: center;
 `;
+
+export const Error = styled.li``;
