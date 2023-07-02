@@ -11,7 +11,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts, addContact } from 'redux/contactsSlice';
 
-export default function ContactForm({ onSubmit }) {
+export default function ContactForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -20,21 +20,6 @@ export default function ContactForm({ onSubmit }) {
 
   const changeName = e => setName(e.target.value);
   const changeNumber = e => setNumber(e.target.value);
-
-  // const handleInputChange = event => {
-  //   const { name, value } = event.currentTarget;
-
-  //   switch (name) {
-  //     case 'name':
-  //       setName(value);
-  //       break;
-  //     case 'number':
-  //       setNumber(value);
-  //       break;
-  //     default:
-  //       return;
-  //   }
-  // };
 
   const handleSubmit = event => {
     event.preventDefault();
